@@ -67,6 +67,19 @@ ambil("halaman-katalog").addEventListener("change", tampilkanKatalog);
 const USERNAME = "galih";
 const PASSWORD = "333";
 
+// Fitur show password: mata bersilang saat password tersembunyi
+ambil("tombol-lihat-password").addEventListener("click", function () {
+  const password = ambil("isian-password");
+  const terlihat = password.type === "password";
+  password.type = terlihat ? "text" : "password";
+  this.setAttribute("aria-pressed", String(terlihat));
+  this.setAttribute(
+    "aria-label",
+    terlihat ? "Sembunyikan password" : "Tampilkan password",
+  );
+  this.closest(".password-input-wrap").classList.toggle("password-terlihat", terlihat);
+});
+
 // Fitur masuk (login), setelah berhasil kembali ke katalog
 ambil("form-login").addEventListener("submit", function (e) {
   e.preventDefault();

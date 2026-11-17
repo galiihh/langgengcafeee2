@@ -251,6 +251,55 @@ main.wadah {
   resize: vertical; 
 }
 
+/* Fitur tombol mata untuk show password pada halaman login */
+.password-input-wrap {
+  position: relative;
+}
+
+.password-input-wrap input {
+  padding-right: 52px;
+}
+
+.tombol-lihat-password {
+  position: absolute;
+  top: 50%;
+  right: 4px;
+  display: grid;
+  width: 40px;
+  height: 40px;
+  padding: 8px;
+  transform: translateY(-50%);
+  place-items: center;
+  border: 0;
+  border-radius: 6px;
+  background: transparent;
+  color: var(--teks-redup);
+  cursor: pointer;
+}
+
+.tombol-lihat-password:hover {
+  color: var(--hijau-tua);
+}
+
+.tombol-lihat-password:focus-visible {
+  outline: 2px solid var(--aksen);
+  outline-offset: 1px;
+}
+
+.tombol-lihat-password svg {
+  width: 20px;
+  height: 20px;
+  fill: none;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 1.8;
+}
+
+.password-input-wrap.password-terlihat .garis-silang-mata {
+  display: none;
+}
+
 /* ==== FITUR VALIDASI ISIAN ==== */
 .kolom-isian :is(input, select, textarea):user-invalid { 
   border-color: var(--merah); 

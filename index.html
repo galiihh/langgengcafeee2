@@ -28,7 +28,7 @@
                     <label class="hanya-pembaca-layar" for="input-cari">Cari menu</label>
                     <input type="search" id="input-cari" autocomplete="off">
                     <button type="submit" class="tombol-cari">
-                        <img src="ASSET/ikon.png" alt="" width="16" height="16">
+                        <img src="ASSET/searchiconwhite.png" alt="" width="16" height="16">
                         <span>Cari</span>
                     </button>
                 </form>
@@ -36,7 +36,7 @@
                 <!-- Fitur Navigasi -->
                 <nav class="navigasi" aria-label="Navigasi utama">
                     <a href="#/keranjang" data-nav="keranjang" class="nav-keranjang">
-                        <img src="ASSET/keranjang.png" alt="" width="20" height="20">
+                        <img src="ASSET/carticonwhite.png" alt="" width="20" height="20">
                         <span>Keranjang</span>
                         <span class="lencana" id="lencana-keranjang">0</span>
                     </a>
@@ -233,7 +233,18 @@
                     <div class="kolom-isian">
                         <!-- Fitur isian password dan pesan login salah -->
                         <label for="isian-password">Password</label> 
-                        <input type="password" id="isian-password" autocomplete="current-password" required> 
+                        <!-- Fitur show password dengan simbol mata yang berubah -->
+                        <div class="password-input-wrap">
+                            <input type="password" id="isian-password" autocomplete="current-password" required>
+                            <button type="button" class="tombol-lihat-password" id="tombol-lihat-password"
+                                aria-label="Tampilkan password" aria-pressed="false">
+                                <svg viewBox="0 0 24 24" aria-hidden="true">
+                                    <path d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7S2 12 2 12Z"></path>
+                                    <circle cx="12" cy="12" r="3"></circle>
+                                    <path class="garis-silang-mata" d="m3 3 18 18"></path>
+                                </svg>
+                            </button>
+                        </div>
                         <p class="pesan-galat">Password wajib diisi.</p> 
                         <p class="pesan-galat" id="login-salah" hidden>Username atau password salah.</p> 
                     </div>
